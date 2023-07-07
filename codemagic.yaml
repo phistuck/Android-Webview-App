@@ -10,8 +10,11 @@ workflows:
       - name: List tasks
         working_directory: .
         script: ./gradlew tasks
+      - name: Do something
+        working_directory: .
+        script: ./gradlew
       - name: Build Android APK
-        working_directory: android
+        working_directory: .
         script: ./gradlew build
     artifacts:
       - app/build/outputs/**/**/*.apk
