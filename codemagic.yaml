@@ -4,11 +4,8 @@ workflows:
       - name: List files in .
         working_directory: .
         script: ls -lnia
-      - name: List files in android
-        working_directory: android
-        script: ls -lnia
       - name: List tasks
-        working_directory: android
+        working_directory: .
         script: ./gradlew tasks
       - name: Build Android APK
         working_directory: android
