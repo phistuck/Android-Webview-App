@@ -1,11 +1,17 @@
 workflows:
   my-workflow:
     scripts:
-      - name: List tasks
+      - name: List files in .
         working_directory: .
+        script: ls -lnia
+      - name: List files in android
+        working_directory: android
+        script: ls -lnia
+      - name: List tasks
+        working_directory: android
         script: ./gradlew tasks
       - name: Build Android APK
-        working_directory: .
+        working_directory: android
         script: ./gradlew build
     artifacts:
       - app/build/outputs/**/**/*.apk
