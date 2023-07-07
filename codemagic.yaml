@@ -1,7 +1,7 @@
 workflows:
   my-workflow:
     scripts:
-      - name: Build Android APK
+      - name: List tasks
         working_directory: .
         script: ./gradlew tasks
       - name: Build Android APK
